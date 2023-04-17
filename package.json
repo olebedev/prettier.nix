@@ -1,0 +1,11 @@
+{
+  "name": "prettier-nix",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:olebedev/prettier.nix.git",
+  "author": "Oleg Lebedev <oleg@lebedev.au>",
+  "license": "MIT",
+  "dependencies": {
+    "prettier": "^2.8.7"
+  }
+}
