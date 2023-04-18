@@ -22,7 +22,13 @@
               yarn-lock = ./yarn.lock;
             };
           in
-          env.pkgs.prettier;
+          pkgs.${system}.buildEnv {
+            name = "prettier-bin";
+            paths = [
+              env.pkgs.prettier
+            ];
+            pathsToLink = [ "/bin" ];
+          };
       });
 
       devShells = forAllSystems (system: {
