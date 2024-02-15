@@ -4,8 +4,12 @@
     url = "github:canva-public/js2nix";
     flake = false;
   };
+  inputs.flake-compat = {
+    url = github:edolstra/flake-compat;
+    flake = false;
+  };
 
-  outputs = { self, nixpkgs, js2nix }:
+  outputs = { self, nixpkgs, js2nix, ... }:
     let
       supportedSystems = [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
